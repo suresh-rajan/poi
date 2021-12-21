@@ -757,6 +757,53 @@ public class SXSSFSheet implements Sheet, OoxmlSheetExtensions {
     public Footer getFooter() {
         return _sh.getFooter();
     }
+    
+    /**
+     * Returns the odd footer. Used on all pages unless
+     *  other footers also present, when used on only
+     *  odd pages.
+     */
+    public Footer getOddFooter() {
+        return _sh.getOddFooter();
+    }
+    
+    /**
+     * Returns the even footer. Not there by default, but
+     *  when set, used on even pages.
+     */
+    public Footer getEvenFooter() {
+        return new _sh.getEvenFooter();
+    }
+    /**
+     * Returns the first page footer. Not there by
+     *  default, but when set, used on the first page.
+     */
+    public Footer getFirstFooter() {
+    	return new _sh.getFirstFooter();
+    }
+
+    /**
+     * Returns the odd header. Used on all pages unless
+     *  other headers also present, when used on only
+     *  odd pages.
+     */
+    public Header getOddHeader() {
+    	return new _sh.getOddHeader();
+    }
+    /**
+     * Returns the even header. Not there by default, but
+     *  when set, used on even pages.
+     */
+    public Header getEvenHeader() {
+    	return new _sh.getEvenHeader();
+    }
+    /**
+     * Returns the first page header. Not there by
+     *  default, but when set, used on the first page.
+     */
+    public Header getFirstHeader() {
+    	return new _sh.getFirstHeader();
+    }
 
     /**
      * Sets a flag indicating whether this sheet is selected.
